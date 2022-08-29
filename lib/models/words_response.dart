@@ -3,8 +3,9 @@ class WordsResponse {
   WordsResponse({this.meaningList});
   WordsResponse.fromJson(Map<String, dynamic> json) {
     if (json['anlamlarListe'] != null) {
-      json["anlamlarliste"]
-          .forEach((a) => meaningList?.add(MeaningList.fromJson(a)));
+      meaningList=[];
+      json['anlamlarliste']
+          .forEach((a) => meaningList!.add(MeaningList.fromJson(a)));
     }
     ;
   }

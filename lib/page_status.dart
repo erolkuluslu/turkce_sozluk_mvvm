@@ -1,1 +1,1 @@
-enum PageStatus{initial,loading,notfound,success}
+//enum PageStatus{initial,loading,notfound,success}

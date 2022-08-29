@@ -9,7 +9,7 @@ class DictionaryService {
   Future<List<String>> searchWord(String word) async {
     Uri url = Uri.parse('https://sozluk.gov.tr/gts?ara=$word');
     final response = await http.get(url);
-    if (response == 200) {
+    if (response.statusCode == 200) {
       final result = json.decode(response.body);
       List<String> meanings = [];
       if (result[0] != null) {
